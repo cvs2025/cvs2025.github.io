@@ -114,10 +114,10 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: calc(100vh - 80px); /* Account for navbar height */
-            padding: 100px 20px 20px; /* Added top padding for fixed navbar */
+            min-height: calc(100vh - 120px); /* Account for navbar and footer height */
+            padding: 100px 20px 50px; /* Added padding for navbar and footer */
             text-align: center;
-            max-height: calc(100vh - 80px);
+            max-height: calc(100vh - 120px);
             overflow: hidden;
         }
         
@@ -147,6 +147,53 @@
             max-width: 600px;
             margin: 0 auto 0.5rem;
             line-height: 1.5;
+        }
+        
+        h3 {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #7f8c8d;
+            margin-top: 1.5rem;
+            font-style: italic;
+        }
+        
+        /* Footer Styles */
+        .footer {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #f8f9fa;
+            border-top: 1px solid #e9ecef;
+            padding: 10px 0;
+            z-index: 999;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .footer-text {
+            font-size: 0.875rem;
+            color: #6c757d;
+            margin: 0;
+        }
+        
+        .footer-link {
+            color: #3498db;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-link:hover {
+            color: #2980b9;
+            text-decoration: underline;
         }
         
         @media (max-width: 768px) {
@@ -195,9 +242,18 @@
             }
             
             .container {
-                padding: 90px 15px 15px;
-                min-height: calc(100vh - 70px);
-                max-height: calc(100vh - 70px);
+                padding: 90px 15px 45px;
+                min-height: calc(100vh - 110px);
+                max-height: calc(100vh - 110px);
+            }
+            
+            .footer-content {
+                padding: 0 1rem;
+            }
+            
+            .footer-text {
+                font-size: 0.75rem;
+                text-align: center;
             }
             
             h1 {
@@ -264,8 +320,18 @@
         <h2>24th October</h2>
         <p>Welcome to the inaugural alumni meet for NLSIU PGD in Cyber Law & Forensics</p>
         <p>Stay tuned for speaker announcements, whitepaper releases, and strategic collaborations</p>
-        <h3>Produly presented by PGDCLCF 24-25 Batch</h3>
+        <h3>Proudly presented by PGDCLCF 24-25 Batch</h3>
     </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="footer-text">
+                © 2025 Cyber Vidhi Sangam. All rights reserved. | 
+                <a href="terms_and_conditions.pdf" class="footer-link" target="_blank" rel="noopener noreferrer">Terms and Conditions</a>
+            </p>
+        </div>
+    </footer>
 
     <script>
         // Mobile menu toggle functionality
