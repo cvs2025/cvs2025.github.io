@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="The inaugural alumni meet for the NLSIU PGD in Cyber Law & Forensics. Join us on 24th October in Bangalore for a confluence of minds and a vision for the future of techno-legal discourse in India.">
-    <title>Cyber Vidhi Sangam 2025</title>
-    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <meta name="description" content="Regulating AI-Generated Deepfakes & Misinformation: Understanding the IT Amendment Rules, 2026.">
+    <title>Cyber Vidhi Sangam | Law, Tech & Tomorrow</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -30,8 +29,9 @@
         .font-serif {
             font-family: 'Playfair Display', Georgia, serif;
         }
+        /* The Trademark Hero Style */
         .hero-bg {
-            background-image: linear-gradient(rgba(26, 32, 44, 0.8), rgba(44, 82, 130, 0.8)), url('images/banner.png');
+            background-image: linear-gradient(rgba(26, 32, 44, 0.85), rgba(44, 82, 130, 0.85)), url('images/banner.png');
             background-size: cover;
             background-position: center;
             position: relative;
@@ -43,7 +43,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(44, 82, 130, 0.3);
+            background: rgba(44, 82, 130, 0.2);
             z-index: 1;
         }
         .hero-content {
@@ -77,6 +77,7 @@
             transition: all 0.2s ease;
             text-decoration: none;
             display: inline-block;
+            text-align: center;
         }
         .btn-primary:hover {
             background: var(--primary-light);
@@ -97,35 +98,7 @@
             color: var(--text-muted);
             margin-bottom: 4rem;
         }
-        .timeline .timeline-item {
-            position: relative;
-        }
-        .timeline .timeline-item .card {
-            position: relative;
-        }
-        @media (min-width: 768px) {
-            .timeline .timeline-item:nth-child(odd) .card::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                left: 100%;
-                transform: translateY(-50%);
-                border-width: 10px;
-                border-style: solid;
-                border-color: transparent transparent transparent var(--border-color);
-            }
-            .timeline .timeline-item:nth-child(even) .card::before {
-                content: '';
-                position: absolute;
-                top: 50%;
-                right: 100%;
-                transform: translateY(-50%);
-                border-width: 10px;
-                border-style: solid;
-                border-color: transparent var(--border-color) transparent transparent;
-            }
-        }
-        /* Animation for scroll reveal */
+        /* Reveal Animations */
         .js .reveal {
             opacity: 0;
             transform: translateY(20px);
@@ -139,39 +112,29 @@
             background: linear-gradient(135deg, var(--primary), var(--primary-light));
             color: white;
             border-radius: 50%;
-            width: 80px;
-            height: 80px;
+            width: 60px;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 1rem;
-        }
-        .speaker-card {
-            background: white;
-            border-radius: 12px;
-            padding: 1.5rem;
-            text-align: center;
-            border: 1px solid var(--border-color);
-            transition: all 0.2s ease;
-        }
-        .speaker-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            margin-bottom: 1rem;
         }
         .speaker-image {
-            width: 120px;
-            height: 120px;
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            border: 4px solid var(--border-color);
+            width: 200px;
+            height: 200px;
+            border-radius: 12px;
             object-fit: cover;
+            border: 4px solid white;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
         }
-        .timeline-dot {
-            background: var(--primary);
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            box-shadow: 0 0 0 4px white, 0 0 0 6px var(--border-color);
+        .whitepaper-tag {
+            background: var(--accent);
+            color: var(--primary);
+            padding: 0.25rem 0.75rem;
+            border-radius: 99px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
         }
     </style>
     <script>document.documentElement.classList.remove('no-js'); document.documentElement.classList.add('js');</script>
@@ -179,280 +142,271 @@
 <body>
 
     <header class="nav-bar sticky top-0 z-50">
-        <nav class="container mx-auto px-6 py-4 flex justify-between items-center flex-wrap">
-            <a href="#" class="font-serif text-2xl font-bold text-gray-900"> <img src="images/cvs-2.png" alt="Cyber Vidhi Sangam" class="w-20 h-10" style="height: 100px; width: 200px;"> </a>
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-3">
+                <img src="images/cvs-2.png" alt="Cyber Vidhi Sangam" class="h-12 w-auto" onerror="this.style.display='none'">
+                <span class="font-serif text-xl font-bold text-gray-900 hidden sm:block">Cyber Vidhi Sangam</span>
+            </a>
 
-            <div class="md:hidden">
-                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-700 focus:outline-none focus:text-blue-700" aria-controls="mobile-menu" aria-expanded="false">
-                    <span class="sr-only">Open main menu</span>
-                    <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-
-                    </svg>
-                </button>
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-700 transition font-medium">About</a>
+                <a href="#sessions" class="text-gray-600 hover:text-blue-700 transition font-medium">Sessions</a>
+                <a href="#whitepapers" class="text-gray-600 hover:text-blue-700 transition font-medium">Whitepapers</a>
+                <a href="#speaker" class="text-gray-600 hover:text-blue-700 transition font-medium">Speaker</a>
+                <a href="https://forms.gle/M45Noq3pXRQRb7Q76" class="btn-primary">RSVP</a>
             </div>
 
-            <div id="mobile-menu" class="hidden w-full md:flex md:items-center md:w-auto">
-                <div class="w-full md:flex md:items-center md:space-x-8 pt-4 md:pt-0">
-                    <a href="#about" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">About</a>
-                    <a href="#speakers" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Speakers</a>
-                    <a href="#schedule" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Schedule</a>
-                    <!--<a href="#organizers" class="block py-2 text-gray-600 hover:text-blue-700 transition-colors">Organizers</a>-->
-                    <a href="#register" class="btn-primary mt-4 md:mt-0 md:-my-2">Register</a>
-                </div>
-            </div>
+            <button id="mobile-menu-button" class="md:hidden text-gray-800">
+                <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" /></svg>
+            </button>
         </nav>
     </header>
 
-    <section id="home" class="hero-bg min-h-screen flex items-center">
+    <!-- Hero Section -->
+    <section class="hero-bg min-h-[85vh] flex items-center pt-10">
         <div class="hero-content container mx-auto px-6 text-center text-white">
-            <p class="text-xl md:text-xl mb-4 text-blue-100"> An Initiative by NLSIU PGD Cyber Law & Cyber Forensics Alumni  </p>
-            <br> <br>
-            <h1 class="font-serif text-5xl md:text-7xl font-extrabold mb-6 leading-tight">Cyber Vidhi Sangam</h1>
-            <h2 class="text-xl md:text-4xl text-blue-100 mb-8"> CLCF Conclave 2025 : Law, Tech & Tomorrow </h2>
+            <span class="inline-block px-4 py-1 bg-blue-500/30 border border-blue-400/50 rounded-full text-sm font-semibold mb-6 tracking-wide"> CVS INITIATIVE | ONLINE SESSION</span>
+            <h1 class="font-serif text-4xl md:text-6xl font-extrabold mb-6 leading-tight max-w-5xl mx-auto">
+                Regulating AI-Generated Deepfakes & Misinformation: Can the IT Amendment Rules, 2026 Do the Job?
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 mb-6 font-light tracking-wide italic">Law, Tech & Tomorrow Series</p>
             
-            <p class="text-3xl md:text-4xl font-bold text-blue-200 mb-8">24 October 2025</p>
-            
-            <a href="#register" class="btn-primary text-lg px-8 py-4">Reserve Your Seat</a>
+            <!-- Date and Time added to Banner -->
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-3 md:space-y-0 md:space-x-8 mb-10 text-lg md:text-xl font-semibold bg-white/10 backdrop-blur-md border border-white/20 py-4 px-8 rounded-xl max-w-max mx-auto">
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                    <span>Saturday, 14 March 2026</span>
+                </div>
+                <span class="hidden md:block opacity-40">|</span>
+                <div class="flex items-center space-x-3">
+                    <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <span>11:00 AM – 12:30 PM IST</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://forms.gle/M45Noq3pXRQRb7Q76" class="btn-primary text-lg px-8 py-4 bg-white text-blue-900 hover:bg-blue-50">Register for Session</a>
+                <a href="#about" class="px-8 py-4 border border-white/30 rounded-lg font-semibold hover:bg-white/10 transition">Learn More</a>
+            </div>
         </div>
     </section>
 
-    <main class="container mx-auto px-6 py-20">
-
-        <section id="details" class="py-20">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                <div class="reveal">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Date</h3>
-                    <p class="text-lg text-gray-700">24 October 2025</p>
-                </div>
-                <div class="reveal" style="transition-delay: 200ms;">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Venue</h3>
-                    <p class="text-lg text-gray-700"> Bangalore International Center <br/><span class="text-sm text-gray-500">Bangalore, India</span></p>
-                </div>
-                <div class="reveal" style="transition-delay: 400ms;">
-                    <div class="feature-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                    </div>
-                    <h3 class="text-2xl font-bold text-gray-900 mb-2">Time</h3>
-                    <p class="text-lg text-gray-700">04:00 PM - 09:00 PM</p>
-                </div>
+    <!-- Why This Conversation Matters Today -->
+    <section id="about" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center reveal">
+                <h2 class="section-title">Why This Conversation Matters Today</h2>
+                <p class="text-lg text-gray-700 leading-relaxed mb-8">
+                    Deepfakes and synthetic media now influence elections, reputations, and markets in India, creating an urgent need to understand what the new rules demand from platforms, creators, and businesses. The 2026 amendments to the IT Act have introduced India’s first formal definition and regulatory framework for <strong>Synthetically Generated Information (SGI)</strong>, a category that now sits at the centre of public discourse on AI-generated deepfakes, misinformation, and platform responsibility.
+                </p>
+                <p class="text-lg text-gray-700 leading-relaxed">
+                    As platforms, creators, businesses, and users grapple with mandatory labelling, compressed takedown timelines, and uncertain liability boundaries, the need for clarity has never been more urgent. This session brings together legal interpretation, policy context, and practical implications to help stakeholders understand what the law says, and what it leaves open.
+                </p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="about" class="py-20 reveal">
+    <!-- Relevant to You - Grid -->
+    <section id="sessions" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Why This Session Is Relevant to You</h2>
+            <p class="section-subtitle">Practical insights for every stakeholder in the ecosystem</p>
             
-            <div class="max-w-4xl mx-auto text-left text-gray-700 text-lg leading-relaxed space-y-8">
-                <div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-3">A Historic Reunion: The Inaugural Alumni Meet</h3>
-                    <p><strong>Cyber Vidhi Sangam</strong> marks the inaugural alumni meet for the esteemed <strong>Post Graduate Diploma in Cyber Law & Cyber Forensics (PGDCLCF)</strong> from NLSIU, PACE. Spearheaded by the batch of 2025, this event is more than just a conference; it's a homecoming. It's a unique opportunity for us, the alumni, to reconnect, share our journeys, and strengthen the bonds forged during our time at India's premier law school.</p>
-                    <p class="mt-4">The core of the day is dedicated to <strong>connection and gratitude</strong>. We will host a special felicitation ceremony to honor the professors whose guidance has been instrumental in our careers. Following this, a dedicated meet-and-greet session will provide the perfect platform to build a robust professional network among peers who are now leading experts in the techno-legal domain across various industries.</p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-3">Our Vision for the Future</h3>
-                    <p>While this meet celebrates our shared past, its gaze is fixed firmly on the future. <strong>Cyber Vidhi Sangam</strong> is the cornerstone of a much larger ambition. In a nation rapidly digitizing, the need for a unified, authoritative techno-legal voice has never been more critical.</p>
-                    <p class="mt-4">This event is the first step in transforming our powerful alumni network into a formidable <strong>national techno-legal forum</strong>. Our vision is to create a permanent platform for policy advocacy, industry collaboration, and continuous learning that can guide India through the complex challenges at the intersection of technology and law.</p>
-                </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-3">Why Attend? </h3>
-                    <p>This event is not just about celebrating our past; it's about shaping our future. By attending, you'll:</p>
-                    <ul class="list-disc list-inside">
-                        <li>Connect with your peers, professors, policy makers and other industry leaders who are shaping the future of cyber law </li>
-                        <li>Gain insights from experts and decode how law is evolving with disruptive technologies </li>
-                        <li>Build a strong network of professionals who share your passion for techno-legal innovation within and outside the NLSIU Alumni Network</li>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- For Lawyers -->
+                <div class="card p-8 reveal">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">For Lawyers</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Understand the statutory definition of SGI and judicial interpretation</li>
+                        <li>• Analyse intermediary obligations and safe-harbour shifts</li>
+                        <li>• Identify grey areas for litigation and advisory work</li>
                     </ul>
                 </div>
-                <div>
-                    <h3 class="font-serif text-2xl font-bold text-gray-900 mb-3">Event Highlights </h3>
-                    <ul class="list-disc list-inside">
-                        <li>Keynote Address by [Speaker Name] </li>
-                        <li>Panel discussions </li>
-                        <li>Fireside chats </li>
-                        <li>Networking Session </li>
-                        <li>Special Felicitation Ceremony </li>
-                        <li>cocktail and Dinner </li>
+                <!-- For Tech -->
+                <div class="card p-8 reveal" style="transition-delay: 100ms;">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">For Tech Professionals</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• SGI labelling and verification obligations in product design</li>
+                        <li>• Platform incentives around content removal & risk mitigation</li>
+                        <li>• Requirements for "compliance-ready" architecture</li>
                     </ul>
                 </div>
-            </div>
-        </section>
-
-                <section id="speakers" class="py-20">
-            <h2 class="section-title reveal">Esteemed Speakers</h2>
-            <p class="section-subtitle reveal">Insights from the Forefront of Law and Technology</p>
-            <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="speaker-card reveal">
-                    <img src="images/nigam.jpg" alt="Dr. Nigam Nuggehalli" class="speaker-image">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Nigam Nuggehalli</h3>
-                    <p class="text-primary mb-2">Registrar, NLSIU</p>
-                    <p class="text-sm text-gray-600">Professor of Law</p>
-                </div>
-                <div class="speaker-card reveal">
-                    <img src="images/nagarathna.jpeg" alt="Dr. A Nagarathna" class="speaker-image">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Dr. Nagarathna</h3>
-                    <p class="text-primary mb-2">Associate Professor of Law, NLSIU</p>
-                    <p class="text-sm text-gray-600">Leading expert in Cyber Law</p>
-                </div>
-                <div class="speaker-card reveal" style="transition-delay: 200ms;">
-                    <img src="images/shloka.jpeg" alt="Shloka Narayanan" class="speaker-image">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Shloka Narayanan</h3>
-                    <p class="text-primary mb-2">Advocate, Supreme Court</p>
-                    <p class="text-sm text-gray-600">Specialist in Technology Law & Policy</p>
-                </div>
-                <div class="speaker-card reveal" style="transition-delay: 400ms;">
-                    <img src="images/sachin.png" alt="Sachin Dhawan" class="speaker-image">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Prof. Sachin Dhawan</h3>
-                    <p class="text-primary mb-2">Faculty, NLSIU</p>
-                    <p class="text-sm text-gray-600">Expert in Corporate Cyber Governance</p>
-                </div>
-                <div class="speaker-card reveal" style="transition-delay: 400ms;">
-                    <img src="images/chauhan.png" alt="Siddarth Chauhan" class="speaker-image">
-                    <h3 class="text-xl font-bold text-gray-900 mb-2">Prof. Siddarth Chauhan</h3>
-                    <p class="text-primary mb-2">Faculty, NLSIU</p>
-                    <p class="text-sm text-gray-600">Expert in Constitutional law</p>
-                </div>
-            </div>
-        </section>
-
-        <section id="schedule" class="py-20">
-            <h2 class="section-title reveal">Day's Agenda</h2>
-            <div class="max-w-3xl mx-auto relative timeline">
-                <div class="hidden md:flex border-l-2 border-dashed border-gray-300 absolute h-full top-0 left-4 md:left-1/2 -translate-x-1/2"></div>
-                <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
-                    <div class="order-1 md:w-5/12"></div>
-                    <div class="md:flex hidden z-20 flex items-center order-1 timeline-dot"></div>
-                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-600 text-sm">16:00 - 16:30</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Registration & Welcome Coffee</h3>
+                <!-- For Compliance -->
+                <div class="card p-8 reveal" style="transition-delay: 200ms;">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
                     </div>
+                    <h3 class="text-xl font-bold mb-4">For Compliance</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Operational impact of reduced takedown timelines</li>
+                        <li>• Navigating the absence of formal government guidance</li>
+                        <li>• Principles for internal checklists and risk frameworks</li>
+                    </ul>
                 </div>
-                <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
-                    <div class="order-1 md:w-5/12"></div>
-                    <div class="md:flex hidden z-20 flex items-center order-1 timeline-dot"></div>
-                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-600 text-sm">16:30 - 17:30</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Inaugural Address & Keynote</h3>
-                        <p class="text-sm text-gray-700">by Dr. Nagarathna</p>
+                <!-- For Business -->
+                <div class="card p-8 reveal">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
                     </div>
+                    <h3 class="text-xl font-bold mb-4">For Business Owners</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• How platform decisions affect your content and reach</li>
+                        <li>• Liabilities that do NOT fall on creators under 2026 rules</li>
+                        <li>• Risks arising from over-compliance by intermediaries</li>
+                    </ul>
                 </div>
-                 <div class="timeline-item mb-8 flex justify-between items-center w-full right-timeline reveal">
-                    <div class="order-1 md:w-5/12"></div>
-                    <div class="md:flex hidden z-20 flex items-center order-1 timeline-dot"></div>
-                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-600 text-sm">18:00 - 18:30</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Panel: Privacy in the Indian Business Context</h3>
-                        <p class="text-sm text-gray-700">Panelists: Sachin Dhawan, Shloka Narayanan </p>
+                <!-- For Students -->
+                <div class="card p-8 reveal" style="transition-delay: 100ms;">
+                    <div class="feature-icon">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" /></svg>
                     </div>
+                    <h3 class="text-xl font-bold mb-4">For Students</h3>
+                    <ul class="text-gray-600 space-y-2 text-sm">
+                        <li>• Foundation of India’s evolving digital regulation</li>
+                        <li>• How SGI fits into global regulatory trends</li>
+                        <li>• Intersection of legal interpretation and real-world policy</li>
+                    </ul>
                 </div>
-                <div class="timeline-item mb-8 flex justify-between md:flex-row-reverse items-center w-full left-timeline reveal">
-                    <div class="order-1 md:w-5/12"></div>
-                    <div class="md:flex hidden z-20 flex items-center order-1 timeline-dot"></div>
-                    <div class="order-1 card rounded-lg shadow-xl w-full md:w-5/12 px-6 py-4">
-                        <p class="text-gray-600 text-sm">18:30 - 19:30</p>
-                        <h3 class="font-bold text-gray-900 text-lg">Fireside Chat: AI's role in future of cyber crimes</h3>
-                         <p class="text-sm text-gray-700">Panelists: Dr. Nagarathna</p>
+                <!-- Info Card -->
+                <div class="card p-8 bg-blue-900 text-white reveal" style="transition-delay: 200ms;">
+                    <h3 class="text-2xl font-serif font-bold mb-6">Event Recap</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+                            <span class="text-lg">Sat, 14 March 2026</span>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                            <span class="text-lg">11:00 AM – 12:30 PM IST</span>
+                        </div>
+                        <div class="pt-6">
+                            <a href="https://forms.gle/M45Noq3pXRQRb7Q76" class="w-full btn-primary bg-white text-blue-900 hover:bg-blue-50">RSVP Here</a>
+                        </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--<section id="organizers" class="py-20">
-            <h2 class="section-title reveal">Organizing Committee</h2>
-            <p class="section-subtitle reveal">The Alumni Team Behind This Initiative</p>
-            <div class="max-w-5xl mx-auto card rounded-lg p-8 md:p-12 reveal">
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-4 text-lg">
-                    <div><span class="font-semibold text-gray-900">Organizer Name 1,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 2,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 3,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 4,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 5,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 6,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 7,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 8,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 9,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 10,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 11,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 12,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 13,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 14,</span> <span class="text-gray-600">Affiliation</span></div>
-                    <div><span class="font-semibold text-gray-900">Organizer Name 15,</span> <span class="text-gray-600">Affiliation</span></div>
+    <!-- Whitepapers Section -->
+    <section id="whitepapers" class="py-24 bg-white border-t border-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Whitepapers & Policy Briefs</h2>
+            <p class="section-subtitle">Academic research for the legal community</p>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="card p-6 flex flex-col items-start reveal">
+                    <span class="whitepaper-tag mb-4">Whitepaper 01</span>
+                    <h3 class="text-xl font-bold mb-2">Defining SGI: A Comparative Analysis</h3>
+                    <p class="text-gray-600 text-sm mb-4">An exploration of how the 2026 IT Rules align with global AI governance standards.</p>
+                    <a href="#" class="text-blue-700 font-bold hover:underline mt-auto">Read Document →</a>
+                </div>
+                <div class="card p-6 flex flex-col items-start border-dashed bg-gray-50/50 reveal">
+                    <span class="whitepaper-tag mb-4 opacity-50">Coming Soon</span>
+                    <h3 class="text-xl font-bold mb-2 text-gray-400">Intermediary Liability in the Age of Gen-AI</h3>
+                    <p class="text-gray-400 text-sm mb-4">A forthcoming brief on safe-harbor shifts under the new amendments.</p>
                 </div>
             </div>
-        </section>-->
+        </div>
+    </section>
 
-        <section id="register" class="py-20 text-center reveal">
-            <div class="max-w-4xl mx-auto p-12 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-100 border border-blue-200">
-                <h2 class="font-serif text-4xl font-bold text-gray-900 mb-4">Secure Your Place</h2>
-                <p class="text-gray-700 text-lg mb-8">Registration is now open. Join us for a day of insightful discussions and networking. Limited seats available.</p>
-                <a href="#" class="btn-primary text-xl px-10 py-4">Register Now</a>
+    <!-- About the Speaker -->
+    <section id="speaker" class="py-24 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 flex flex-col md:flex-row reveal">
+                <div class="md:w-1/3 p-10 flex flex-col items-center justify-center bg-gray-50 border-r border-gray-100">
+                    <img src="images/sachin.png" alt="Sachin Dhawan" class="speaker-image mb-4" onerror="this.src='https://via.placeholder.com/400x400?text=Sachin+Dhawan'">
+                    <h3 class="text-2xl font-serif font-bold text-gray-900">Sachin Dhawan</h3>
+                    <p class="text-blue-700 font-semibold text-center">Technology Lawyer & Policy Specialist</p>
+                </div>
+                <div class="md:w-2/3 p-10">
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-gray-400 mb-4">The Speaker</h4>
+                    <p class="text-gray-700 mb-6">
+                        Sachin Dhawan is one of India’s most respected voices in the digital policy ecosystem. A dual-qualified technology lawyer with deep expertise in data protection and content regulation, Sachin brings over 17 years of experience across academia, industry, and public policy.
+                    </p>
+                    <p class="text-gray-700 mb-6">
+                        He has taught at <strong>Jindal Global Law School</strong>, <strong>National Law University Delhi</strong>, and <strong>National Law School Bengaluru (PACE)</strong>, and has held policy roles at Meta, CCG-NLUD, and The Dialogue.
+                    </p>
+                    <p class="text-gray-700 italic">
+                        Sachin is known for his clear, structured, and highly accessible teaching style—breaking down complex legal concepts into simple, relatable explanations.
+                    </p>
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
-
-    <footer class="border-t border-gray-200 bg-gray-50">
-        <div class="container mx-auto px-6 py-12 text-center">
-            <div class="mb-6">
-                <h3 class="font-serif text-2xl font-bold text-gray-900 mb-2">Cyber Vidhi Sangam 2025</h3>
-                <p class="text-gray-600">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network</p>
+    <!-- Previous Activities -->
+    <section id="archive" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Previous Activities</h2>
+            <p class="section-subtitle">Our journey so far</p>
+            
+            <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 opacity-75 grayscale hover:grayscale-0 transition-all duration-500">
+                <div class="card p-8 border-gray-100">
+                    <span class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-2 block">October 2025</span>
+                    <h3 class="text-xl font-serif font-bold mb-3">CVS Conclave: Law, Tech & Tomorrow</h3>
+                    <p class="text-gray-600 text-sm">The inaugural alumni meet at the Bangalore International Center, featuring Dr. Nagarathna and Dr. Nigam Nuggehalli.</p>
+                    <div class="mt-4 flex items-center space-x-2 text-xs text-blue-600 font-bold">
+                        <span>Event Completed</span>
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" /></svg>
+                    </div>
+                </div>
             </div>
-            <div class="border-t border-gray-200 pt-6">
-                <p class="text-gray-500">&copy; 2025 Cyber Vidhi Sangam. All Rights Reserved.</p>
-                <p class="text-sm text-gray-400 mt-2">Powered by NLSIU Alumni Network</p>
+        </div>
+    </section>
+
+    <!-- Final Call to Action -->
+    <section class="py-20 hero-bg text-white text-center">
+        <div class="container mx-auto px-6 hero-content">
+            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Understand the Future of SGI</h2>
+            <p class="text-xl text-blue-100 mb-10 max-w-2xl mx-auto">Join us for a grounded, high-clarity session that cuts through the noise and helps you understand what the IT Rules, 2026 truly mean.</p>
+            <a href="https://forms.gle/M45Noq3pXRQRb7Q76" class="btn-primary text-xl px-12 py-5 bg-white text-blue-900 hover:bg-blue-50">RSVP for March 14th</a>
+            <div class="mt-8">
+                <a href="#" class="text-sm text-blue-200 underline">Read Event Terms & Conditions</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6 flex flex-col items-center">
+                <div class="font-serif text-2xl font-bold mb-2">Cyber Vidhi Sangam</div>
+                <p class="text-gray-500 text-sm max-w-md">An initiative from the NLSIU PGD Cyber Law & Cyber Forensics Alumni Network.</p>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+                <p>&copy; 2026 Cyber Vidhi Sangam. All Rights Reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white transition">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition">Contact Us</a>
+                </div>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const menuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const navLinks = mobileMenu.querySelectorAll('a');
-
-        menuButton.addEventListener('click', () => {
-            const isExpanded = menuButton.getAttribute('aria-expanded') === 'true';
-            menuButton.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.classList.toggle('hidden');
-            
-            // Add mobile-specific styling when menu is open
-            if (!mobileMenu.classList.contains('hidden')) {
-                mobileMenu.classList.add('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
-            } else {
-                mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
-            }
+        // Mobile menu simple toggle
+        const menuBtn = document.getElementById('mobile-menu-button');
+        menuBtn.addEventListener('click', () => {
+            alert('Menu feature would expand here in production.');
         });
 
-        // Close menu when a link is clicked (mobile only)
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    mobileMenu.classList.add('hidden');
-                    mobileMenu.classList.remove('absolute', 'top-16', 'left-0', 'right-0', 'bg-white', 'border-b', 'border-gray-200', 'p-5', 'flex', 'flex-col', 'items-center', 'space-y-4', 'shadow-lg');
-                    menuButton.setAttribute('aria-expanded', 'false');
-                }
-            });
-        });
-
-        // Simple scroll reveal animation
+        // Intersection Observer for Scroll Effects
         const revealElements = document.querySelectorAll('.reveal');
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, {
-            threshold: 0.1
-        });
+        }, { threshold: 0.1 });
 
-        revealElements.forEach(el => {
-            observer.observe(el);
-        });
+        revealElements.forEach(el => observer.observe(el));
     </script>
 
 </body>
